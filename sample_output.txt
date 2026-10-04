@@ -1,0 +1,20 @@
+
+[*] 2132 packets analyzed from attack_sample.pcap
+[*] Protocols: {'DNS': 45, 'TCP': 2057, 'ICMP': 30}
+
+[CRITICAL] Cleartext Credentials: FTP login captured in cleartext  (T1040 Network Sniffing)
+      - user=labadmin pass=S*********!
+[CRITICAL] Cleartext Credentials: HTTP Basic Auth header sent over unencrypted HTTP  (T1040 Network Sniffing)
+      - user=jdoe pass=P*********3
+[CRITICAL] Cleartext Credentials: Login form submitted over unencrypted HTTP  (T1040 Network Sniffing)
+      - user=mrivera pass=W********5
+[HIGH] Port Scan: 10.0.0.66 sent SYNs to 1024 distinct ports on 10.0.0.10  (T1046 Network Service Discovery)
+      - Port range: 1-1024
+      - Ports that answered SYN/ACK (open): [21, 22, 80, 443]
+[HIGH] DNS Tunneling: 40 long/high-entropy queries from 10.0.0.25 to *.evil-tunnel.xyz  (T1071.004 Application Layer Protocol: DNS)
+      - Avg label length: 51.6, avg entropy: 4.58
+      - Example: 15npw6sy5o0lameig4y7vv2tw881c86bahdh09ua7muib90l6wg.evil-tunnel.xyz...
+[MEDIUM] ICMP Sweep: 10.0.0.66 sent echo requests to 30 hosts  (T1018 Remote System Discovery)
+      - Sample targets: ['10.0.0.1', '10.0.0.10', '10.0.0.11', '10.0.0.12', '10.0.0.13']
+
+[+] 6 findings
