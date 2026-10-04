@@ -3,4 +3,3 @@ __pycache__/
 .pytest_cache/
 report.md
 findings.json
-attack_sample.pcap
